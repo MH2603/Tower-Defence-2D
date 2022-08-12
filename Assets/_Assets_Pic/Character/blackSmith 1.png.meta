@@ -1,0 +1,932 @@
+fileFormatVersion: 2
+guid: 356fe87b72b29e440983d6f6653d3f3e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5447935254690252538
+    second: blackSmith 1_0
+  - first:
+      213: 5574240928143552300
+    second: blackSmith 1_1
+  - first:
+      213: -3463507780324657229
+    second: blackSmith 1_2
+  - first:
+      213: -7092230601397681904
+    second: blackSmith 1_3
+  - first:
+      213: -7510098140215977384
+    second: blackSmith 1_4
+  - first:
+      213: 8889625038133755738
+    second: blackSmith 1_5
+  - first:
+      213: -7764342801492610934
+    second: blackSmith 1_6
+  - first:
+      213: 7900812255360387050
+    second: blackSmith 1_7
+  - first:
+      213: -3716051042034295963
+    second: blackSmith 1_8
+  - first:
+      213: 5285464293851489075
+    second: blackSmith 1_9
+  - first:
+      213: -1929827851119699839
+    second: blackSmith 1_10
+  - first:
+      213: 1822171865889009827
+    second: blackSmith 1_11
+  - first:
+      213: -1779638697967488793
+    second: blackSmith 1_12
+  - first:
+      213: 6313493641935154829
+    second: blackSmith 1_13
+  - first:
+      213: 4289516880133600883
+    second: blackSmith 1_14
+  - first:
+      213: -4616899046194060159
+    second: blackSmith 1_15
+  - first:
+      213: -4056859155010852059
+    second: blackSmith 1_16
+  - first:
+      213: -7454189345890883864
+    second: blackSmith 1_17
+  - first:
+      213: 429301992717924678
+    second: blackSmith 1_18
+  - first:
+      213: -4068038370872573056
+    second: blackSmith 1_19
+  - first:
+      213: 5437656483851607290
+    second: blackSmith 1_20
+  - first:
+      213: -2106052090817167574
+    second: blackSmith 1_21
+  - first:
+      213: 4296591905954628918
+    second: blackSmith 1_22
+  - first:
+      213: 2920536640017018245
+    second: blackSmith 1_23
+  - first:
+      213: 4587455041261316146
+    second: blackSmith 1_24
+  - first:
+      213: 2757298851583816189
+    second: blackSmith 1_25
+  - first:
+      213: -4597837873435894823
+    second: blackSmith 1_26
+  - first:
+      213: 3730414725486220187
+    second: blackSmith 1_27
+  - first:
+      213: 1856427787836752305
+    second: blackSmith 1_28
+  - first:
+      213: -6600770823563106221
+    second: blackSmith 1_29
+  - first:
+      213: 1192680633138869725
+    second: blackSmith 1_30
+  - first:
+      213: -2766583691066864213
+    second: blackSmith 1_31
+  - first:
+      213: -195676678357924194
+    second: blackSmith 1_32
+  - first:
+      213: -7738474604504655607
+    second: blackSmith 1_33
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blackSmith 1_0
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 464
+        width: 24
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6c32fef34fa9b40800000000000000
+      internalID: 5447935254690252538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_1
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 464
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fa07e279eab5d40800000000000000
+      internalID: 5574240928143552300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 464
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b772f436062fefc0800000000000000
+      internalID: -3463507780324657229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 464
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011498228d5539d90800000000000000
+      internalID: -7092230601397681904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_4
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 404
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ada1c1885c6c790800000000000000
+      internalID: -7510098140215977384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_5
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 404
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f71687fda4e5b70800000000000000
+      internalID: 8889625038133755738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_6
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 404
+        width: 39
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80fbaafb538f3490800000000000000
+      internalID: -7764342801492610934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_7
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 404
+        width: 42
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae70fcdc2e255ad60800000000000000
+      internalID: 7900812255360387050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_8
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 404
+        width: 46
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b5358044fed6cc0800000000000000
+      internalID: -3716051042034295963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_9
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 344
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333670c85cdb95940800000000000000
+      internalID: 5285464293851489075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_10
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 344
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188da584bcfd735e0800000000000000
+      internalID: -1929827851119699839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_11
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 344
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0760268a7a94910800000000000000
+      internalID: 1822171865889009827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_12
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 344
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0fb1b78047d47e0800000000000000
+      internalID: -1779638697967488793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_13
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 344
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e6b3b54090e9750800000000000000
+      internalID: 6313493641935154829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_14
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 285
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376b76a20ec678b30800000000000000
+      internalID: 4289516880133600883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_15
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 285
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18463c367ca7defb0800000000000000
+      internalID: -4616899046194060159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_16
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 224
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b69c9b71423b7c0800000000000000
+      internalID: -4056859155010852059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_17
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 225
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e62cada8466d8890800000000000000
+      internalID: -7454189345890883864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_18
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 225
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649b15943ef25f500800000000000000
+      internalID: 429301992717924678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_19
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 225
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0834b73b7ac6b87c0800000000000000
+      internalID: -4068038370872573056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_20
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 164
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc139a13cf667b40800000000000000
+      internalID: 5437656483851607290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_21
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 164
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fbf5028ccc5c2e0800000000000000
+      internalID: -2106052090817167574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_22
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 164
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6358e3bf29f80ab30800000000000000
+      internalID: 4296591905954628918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_23
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 164
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d2ab5b994d78820800000000000000
+      internalID: 2920536640017018245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_24
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 104
+        width: 21
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238a47dfd0ae9af30800000000000000
+      internalID: 4587455041261316146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_25
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 104
+        width: 20
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1fe3c52b4e34620800000000000000
+      internalID: 2757298851583816189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_26
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 104
+        width: 21
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db140380d23130c0800000000000000
+      internalID: -4597837873435894823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_27
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 104
+        width: 20
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b931e71ad6815c330800000000000000
+      internalID: 3730414725486220187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_28
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 104
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b18c2dbc3b53c910800000000000000
+      internalID: 1856427787836752305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_29
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 44
+        width: 26
+        height: 45
+      alignment: 9
+      pivot: {x: 0.41023782, y: 0.50000036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35822c988e95564a0800000000000000
+      internalID: -6600770823563106221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_30
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 44
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5fabc77b04d8010800000000000000
+      internalID: 1192680633138869725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_31
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 44
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad029c7ace1b99d0800000000000000
+      internalID: -2766583691066864213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_32
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 44
+        width: 37
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96c5a70911d84df0800000000000000
+      internalID: -195676678357924194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackSmith 1_33
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 44
+        width: 29
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9095e1fe85a6b9490800000000000000
+      internalID: -7738474604504655607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
