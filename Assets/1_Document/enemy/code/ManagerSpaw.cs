@@ -25,6 +25,8 @@ public class ManagerSpaw : MonoBehaviour
     void Update()
     {
         if( isChecking ) CheckTurn();
+
+        GameManager.instance.isInTurn = isTurning;
     }
 
 
@@ -46,7 +48,7 @@ public class ManagerSpaw : MonoBehaviour
 
     void CheckTurn()
     {
-        if (WhatIsTurn == 0 || turns[WhatIsTurn - 1].transform.childCount == 0)
+        if (WhatIsTurn == 0 || GameManager.instance.enemies.Count == 0 && turns[WhatIsTurn - 1].numEnemyInTurn == 0) //turns[WhatIsTurn - 1].transform.childCount == 0
         {
             buttonFight.SetActive(true);
             isTurning = false;   

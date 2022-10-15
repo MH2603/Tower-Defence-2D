@@ -39,7 +39,7 @@ public class towerRed : MonoBehaviour
                 bullet.SetActive(true);
 
                 bullet.name = "bullet" + i;
-                bullet.transform.SetParent(this.transform);
+                //bullet.transform.SetParent(this.transform);
 
                 Vector2 v = new Vector2(Mathf.Cos(Mathf.PI * i / 2), Mathf.Sin(Mathf.PI * i / 2));
                 //v.Normalize();

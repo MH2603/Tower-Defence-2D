@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class ManagerPoints : MonoBehaviour
 {
-
+    public static ManagerPoints instance;
 
     public Transform[] points;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

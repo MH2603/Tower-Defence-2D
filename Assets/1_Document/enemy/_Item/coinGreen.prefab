@@ -98,4 +98,4 @@ MonoBehaviour:
   intCoin: 1
   speed: 3
   pickUpDistance: 1
-  destroyTime: 5
+  destroyTime: 7

@@ -7,7 +7,7 @@ public class enemy_AI : MonoBehaviour
 
     ManagerPoints managerPoints;
 
-    public enemy_HP enemy_HP;
+    public BaseEnemy enemy_HP;
 
     public float speed;
 
@@ -16,6 +16,8 @@ public class enemy_AI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.instance.enemies.Add(this.gameObject);
+
         managerPoints = GameObject.Find("ManagerPoints").GetComponent<ManagerPoints>();
     }
 
@@ -32,7 +34,13 @@ public class enemy_AI : MonoBehaviour
 
         if(Vector2.Distance(transform.position, managerPoints.points[pos].position) < 0.1)
         {
-            if(pos == 6) Destroy(gameObject); 
+            if(pos == 6)
+            {
+                GameManager.instance.enemies.Remove(this.gameObject);
+
+                Destroy(gameObject);
+
+            }
 
 
             pos++;

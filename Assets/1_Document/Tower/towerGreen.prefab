@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8106956157815265969}
   - component: {fileID: 2758162768194521333}
   - component: {fileID: 8267450094795104215}
+  - component: {fileID: -3439073697699618324}
   m_Layer: 0
   m_Name: towerGreen
   m_TagString: Untagged
@@ -98,3 +99,19 @@ MonoBehaviour:
   bullets: {fileID: 9199891537383434346, guid: 7ea06b6f8345dde44a787038aefc686c, type: 3}
   timeShot: 4
   speedBullet: 1
+--- !u!114 &-3439073697699618324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616686357108000116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0445076c10f51b34fb725a0ef41f4d0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 9146565048793036615, guid: 3043b2f02d0928c41a0a58f19e17ef93, type: 3}
+  dropCount: 14000000
+  dropRadius: 0.05
