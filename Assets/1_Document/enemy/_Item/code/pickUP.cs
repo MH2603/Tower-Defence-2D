@@ -14,11 +14,16 @@ public class pickUP : MonoBehaviour
     public float pickUpDistance = 2.5f;
     public float destroyTime = 5f;
 
-    bool seen;
+
+    SpriteRenderer image;
+
+    bool seen,WillDestroy;
     void Awake()
     {
         player = GameObject.Find("player").GetComponent<Transform>();
         ManagerAsset = GameObject.Find("ManagerAsset");
+
+        image = this.gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Start is called before the first frame update
@@ -32,9 +37,13 @@ public class pickUP : MonoBehaviour
     {
         
         destroyTime -= Time.deltaTime;
-        if(destroyTime < 0)
+
+        if(destroyTime < 0) Destroy(gameObject);
+     
+        if(destroyTime < 1.5f && !WillDestroy )
         {
-            Destroy(gameObject);
+            Invoke("OffImage",0f);
+            WillDestroy = true;
         }
 
         float distance = Vector3.Distance(transform.position, player.position);
@@ -56,4 +65,18 @@ public class pickUP : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
+    void OffImage()
+    {
+        image.enabled = false;
+        Invoke("OnImage", 0.1f);
+    }
+
+    void OnImage()
+    {
+        image.enabled = true;
+        Invoke("OffImage", 0.1f);
+    }
+
 }

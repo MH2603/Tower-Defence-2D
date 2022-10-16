@@ -47,7 +47,7 @@ public class CallEnemy : MonoBehaviour
         GameObject enemy = GameObject.Instantiate(enemyChildren[i]);
         enemy.transform.position = pos;
 
-        enemy.GetComponent<Enemy_AI1>().pos = this.gameObject.GetComponent<Enemy_AI1>().pos;
+        enemy.GetComponent<Enemy_AI>().pos = this.gameObject.GetComponent<Enemy_AI>().pos;
 
         yield return null;  
     }

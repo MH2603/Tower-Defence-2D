@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BaseEnemy : MonoBehaviour
 {
@@ -46,7 +47,9 @@ public class BaseEnemy : MonoBehaviour
             pos.x += dropRadius * Random.Range(-15,10);
             pos.y += dropRadius * Random.Range(-10,15);
 
-            Instantiate(items[i], pos, Quaternion.identity);
+            var item =  Instantiate(items[i], this.transform.position, Quaternion.identity);
+            item.transform.DOMove(pos, 1f);
+
         }
 
     }

@@ -10689,6 +10689,7 @@ MonoBehaviour:
   timeSpaw:
   - {x: 1, y: 1}
   - {x: 1.5, y: 1.3}
+  numEnemyInTurn: 0
 --- !u!1 &820569126
 GameObject:
   m_ObjectHideFlags: 0
@@ -15096,6 +15097,7 @@ MonoBehaviour:
   enemyCount: 05000000
   timeSpaw:
   - {x: 1, y: 1.5}
+  numEnemyInTurn: 0
 --- !u!1 &1267520735
 GameObject:
   m_ObjectHideFlags: 0
@@ -17873,6 +17875,7 @@ MonoBehaviour:
   - {x: 1, y: 1}
   - {x: 1.2, y: 1.25}
   - {x: 1.6, y: 1.4}
+  numEnemyInTurn: 0
 --- !u!1 &1575533243
 GameObject:
   m_ObjectHideFlags: 0
@@ -19055,6 +19058,7 @@ MonoBehaviour:
   enemyCount: 0a000000
   timeSpaw:
   - {x: 1, y: 0}
+  numEnemyInTurn: 0
 --- !u!1 &1646241938
 GameObject:
   m_ObjectHideFlags: 0
@@ -24847,6 +24851,7 @@ MonoBehaviour:
   timeSpaw:
   - {x: 1, y: 1}
   - {x: 1.5, y: 1.3}
+  numEnemyInTurn: 0
 --- !u!1 &1964143383
 GameObject:
   m_ObjectHideFlags: 0

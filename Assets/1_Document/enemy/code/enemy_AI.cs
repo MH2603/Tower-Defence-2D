@@ -1,47 +1,54 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy_AI : MonoBehaviour
+public class Enemy_AI : MonoBehaviour
 {
 
-    ManagerPoints managerPoints;
+    [SerializeField]
+    private float speed;
 
-    public BaseEnemy enemy_HP;
-
-    public float speed;
-
+    [SerializeField]
     public int pos;
+
+    [HideInInspector]
+    public bool Stop = false;
+
+    Transform[] points;
+
+    Rigidbody2D rb;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.instance.enemies.Add(this.gameObject);
-
-        managerPoints = GameObject.Find("ManagerPoints").GetComponent<ManagerPoints>();
+        rb = this.GetComponent<Rigidbody2D>();
+        points = ManagerPoints.instance.points;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if( !enemy_HP.isDeathing) Move();
+        if (!this.GetComponent<BaseEnemy>().isDeathing && !Stop ) Move();
+        else rb.velocity = Vector2.zero;
     }
-
 
     void Move()
     {
-        transform.position = Vector2.MoveTowards(transform.position, managerPoints.points[pos].position, speed * Time.deltaTime);
+        Vector2 dir = points[pos].position - transform.position;
+        dir.Normalize();
+        rb.velocity = dir * speed;  
 
-        if(Vector2.Distance(transform.position, managerPoints.points[pos].position) < 0.1)
+        if (Vector2.Distance(this.transform.position, points[pos].position) < 0.2f)
         {
-            if(pos == 6)
+            if (pos == 6)
             {
                 GameManager.instance.enemies.Remove(this.gameObject);
 
-                Destroy(gameObject);
+                Destroy(this.gameObject);
 
             }
-
 
             pos++;
         }

@@ -38,7 +38,9 @@ public class ManagerItem : MonoBehaviour
 
     public void SetMouse(int i) 
     {
-        Cursor.SetCursor(cursors[i], Vector2.zero, CursorMode.ForceSoftware);
+        
+        Cursor.SetCursor(cursors[i], Vector2.zero, CursorMode.ForceSoftware );
+        
     }
 
     public void OnGrid(bool i)

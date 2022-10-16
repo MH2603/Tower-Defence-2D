@@ -23,12 +23,15 @@ public class bullet : MonoBehaviour
     IEnumerator Set(bool i)
     {
         yield return new WaitForSeconds(0.333333f);
+        this.gameObject.GetComponent<Collider2D>().enabled = true;
         this.gameObject.SetActive(i);
     }
 
     void DesTroy()
     {
         rb.velocity = Vector3.zero;
+        this.gameObject.GetComponent<Collider2D>().enabled = false; 
+
         anima.SetBool("desTroy", true);
 
         StartCoroutine(Set(false));
