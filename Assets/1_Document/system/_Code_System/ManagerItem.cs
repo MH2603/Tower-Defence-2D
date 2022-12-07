@@ -66,31 +66,41 @@ public class ManagerItem : MonoBehaviour
         OnGrid(true);
     } 
 
-    public void OnBuildingRed() // Button On
-    {
-        if (Items[0].x >= Items[0].y)
-        {
-            WhatIsBuilding = 0;
-            SetMouse(2);
-            OnGrid(true);
-        }
-    }
+    //public void OnBuildingRed() // Button On
+    //{
+    //    if (Items[0].x >= Items[0].y)
+    //    {
+    //        WhatIsBuilding = 0;
+    //        SetMouse(2);
+    //        OnGrid(true);
+    //    }
+    //}
 
-    public void OnBuildingGreen() // Button On
-    {
-        if (Items[1].x >= Items[1].y)
-        {
-            WhatIsBuilding = 1;
-            SetMouse(2);
-            OnGrid(true);
-        }
-    }
+    //public void OnBuildingGreen() // Button On
+    //{
+    //    if (Items[1].x >= Items[1].y)
+    //    {
+    //        WhatIsBuilding = 1;
+    //        SetMouse(2);
+    //        OnGrid(true);
+    //    }
+    //}
 
-    public void OnBuildingBlue() // Button On
+    //public void OnBuildingBlue() // Button On
+    //{
+    //    if (Items[2].x >= Items[2].y)
+    //    {
+    //        WhatIsBuilding = 2;
+    //        SetMouse(2);
+    //        OnGrid(true);
+    //    }
+    //}
+
+    public void OnBuildingTower(int IDofTower) // Button On
     {
-        if (Items[2].x >= Items[2].y)
+        if (Items[IDofTower].x >= Items[IDofTower].y)
         {
-            WhatIsBuilding = 2;
+            WhatIsBuilding = IDofTower;
             SetMouse(2);
             OnGrid(true);
         }

@@ -6,7 +6,7 @@ public class Enemy_AI : MonoBehaviour
 {
 
     [SerializeField]
-    private float speed;
+    public float speed;
 
     [SerializeField]
     public int pos;

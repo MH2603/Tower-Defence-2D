@@ -54,6 +54,6 @@ public class DotweenScale : MonoBehaviour
 
     public void Scale(Vector3 newScale, float time)
     {
-        transform.DOScale(newScale, time).SetEase(Ease.InOutSine);
+        transform.DOScale(newScale, time).SetEase(Ease.InOutSine).SetUpdate(true);
     }
 }

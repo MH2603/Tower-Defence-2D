@@ -8,9 +8,9 @@ public class bullet : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anima;
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        this.gameObject.GetComponent<Collider2D>().enabled = true;
     }
 
     // Update is called once per frame
@@ -23,8 +23,8 @@ public class bullet : MonoBehaviour
     IEnumerator Set(bool i)
     {
         yield return new WaitForSeconds(0.333333f);
-        this.gameObject.GetComponent<Collider2D>().enabled = true;
-        this.gameObject.SetActive(i);
+
+        this.gameObject.Recycle();
     }
 
     void DesTroy()

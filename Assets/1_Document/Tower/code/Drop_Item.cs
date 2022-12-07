@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Drop_Item : MonoBehaviour
 {
@@ -26,14 +27,16 @@ public class Drop_Item : MonoBehaviour
     void DropItem(int i)
     {
 
-        while (dropCount[i] > 0)
+        for (int j = 0; j < dropCount[i]; j++)
         {
-            dropCount[i]--;
             Vector3 pos = transform.position;
-            pos.x += dropRadius * Random.Range(-15, 10);
-            pos.y += dropRadius * Random.Range(-10, 15);
+            pos.x += dropRadius * Random.Range(-25, 20);
+            pos.y += dropRadius * Random.Range(-20, 25);
 
-            Instantiate(items[i], pos, Quaternion.identity);
+            GameObject item = items[i].Spawn(this.transform.position, Quaternion.identity);
+            float force = Random.Range(0.1f, 0.5f);
+            int countJump = Random.Range(0, 4);
+            item.transform.DOJump(pos, force, countJump, 1.5f);
         }
     }
 

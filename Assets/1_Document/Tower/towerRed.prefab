@@ -48,6 +48,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -96,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e383f8a3a8bfa9d43a3c5738275e537b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullets: {fileID: 9199891537383434346, guid: 7ea06b6f8345dde44a787038aefc686c, type: 3}
+  bullet: {fileID: 9199891537383434346, guid: 7ea06b6f8345dde44a787038aefc686c, type: 3}
   timeShot: 3
   speedBullet: 1.5
 --- !u!114 &4138006637818241900

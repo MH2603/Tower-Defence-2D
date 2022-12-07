@@ -9,29 +9,21 @@ public class Bomb_Blue : MonoBehaviour
     private Transform spriteCircle;
 
     [SerializeField]
-    private GameObject effect;
+    private ParticleSystem effect;
 
     [SerializeField]
     private Collider2D collider2D;
 
-
-    [SerializeField]
-    private float timeDelay = 1;
+    public float timeDelay = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        spriteCircle.DOScale(new Vector3(1,1,1), timeDelay).SetEase(Ease.InOutSine);
+        spriteCircle.DOScale(new Vector3(1,1,1), timeDelay).SetEase(Ease.InOutSine).OnComplete( () =>
+        {
+            Attack();
+        });
 
-        Invoke("Attack", timeDelay);
-    }
-
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -41,11 +33,8 @@ public class Bomb_Blue : MonoBehaviour
         if (other.gameObject.tag == "enemy")
         {
             other.gameObject.SendMessage("ApplyDame", 1);
-         
 
-            Destroy(gameObject);
-
-           
+            collider2D.enabled = false;
         }
 
 
@@ -54,7 +43,8 @@ public class Bomb_Blue : MonoBehaviour
             if (!other.gameObject.GetComponent<player_HP>().invisible)
             {
                 other.gameObject.SendMessage("ApplyDame", 1);
-                Destroy(gameObject);
+
+                collider2D.enabled = false;
 
             }
 
@@ -66,12 +56,22 @@ public class Bomb_Blue : MonoBehaviour
     {
         collider2D.enabled = true;
 
-        effect.SetActive(true);
-        effect.transform.parent = null;
-        Destroy(effect, 1f);
+        effect.Play();
 
-        Destroy(this.gameObject,0.1f);
+        Invoke("OffCollider", 0.1f);
+        Invoke("Die", 0.5f);
 
+    }
+
+    void OffCollider()
+    {
+        collider2D.enabled = false;
+    }
+
+    void Die()
+    {
+        CancelInvoke("Die");
+        this.gameObject.Recycle();
     }
 
 

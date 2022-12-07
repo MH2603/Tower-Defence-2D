@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class towerBlue : MonoBehaviour
 {
     [SerializeField]
-    private GameObject bullet;
+    private GameObject bulletBlue;
 
+    [SerializeField]
+    private Bomb_Blue bombBlue;
 
     public float timeAttack = 4;
+
+    public float timeDelay = 2f ;
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +32,19 @@ public class towerBlue : MonoBehaviour
     {
         if (GameManager.instance.enemies.Count > 0 &&   GameManager.instance.isInTurn )
         {
-            Vector3 pos = GameManager.instance.enemies[UnityEngine.Random.Range(0, GameManager.instance.enemies.Count)].transform.position;
+            Vector2 pos = GameManager.instance.enemies[UnityEngine.Random.Range(0, GameManager.instance.enemies.Count)].transform.position;
 
-            GameObject.Instantiate(bullet, pos, Quaternion.identity);
+            //GameObject.Instantiate(bombBlue, pos, Quaternion.identity);
+
+            GameObject newBullet = bulletBlue.Spawn(this.transform.position, Quaternion.identity);
+
+            newBullet.transform.DOJump(pos, 3, 0, 2).OnComplete( () =>
+            {
+                newBullet.Recycle();
+            });
+
+            bombBlue.timeDelay = timeDelay; 
+            bombBlue.Spawn(pos, Quaternion.identity);
 
         }
 
