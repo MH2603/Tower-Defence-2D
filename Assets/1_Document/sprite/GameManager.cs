@@ -9,23 +9,26 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> enemies;
 
-    public bool isInTurn;
+    
+
+    public gui GUI;
+    public float Score, LevelFinish = 1;
 
     void Awake()
     {
         instance = this;
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void EndGame()
     {
-        
+        // Set Data
+        if( Score > PlayerPrefs.GetFloat("HighScore") ) PlayerPrefs.SetFloat("HighScore", Score);    
+        if(  LevelFinish > PlayerPrefs.GetFloat("HighLevel") ) PlayerPrefs.SetFloat("HighLevel", LevelFinish);
+
+        GUI.ShowEndGame();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+    
+ 
 }

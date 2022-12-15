@@ -137,9 +137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 992751532757280409, guid: ee2b4edb860c2e042a425293f34e0c28, type: 3}
+  - {fileID: 9146565048793036615, guid: 3043b2f02d0928c41a0a58f19e17ef93, type: 3}
   - {fileID: 2235144835591180753, guid: 12ff71b97ddaeac4ab65724ac62be7ef, type: 3}
-  dropCount: 0200000002000000
+  dropCount: 0200000001000000
   anima: {fileID: 7363462090712761603}
   dropRadius: 0.05
   HP: 3
@@ -177,8 +177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74bfbdc20b9b3bf45b7d53187615ad7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.5
   pos: 0
+  distanceNextPoss: {x: 0.05, y: 0.3}
+  Stop: 0
 --- !u!114 &7363462090712761661
 MonoBehaviour:
   m_ObjectHideFlags: 0

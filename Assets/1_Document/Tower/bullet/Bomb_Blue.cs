@@ -14,7 +14,9 @@ public class Bomb_Blue : MonoBehaviour
     [SerializeField]
     private Collider2D collider2D;
 
-    public float timeDelay = 1;
+
+    
+    public float DMG = 1, timeDelay = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +34,7 @@ public class Bomb_Blue : MonoBehaviour
 
         if (other.gameObject.tag == "enemy")
         {
-            other.gameObject.SendMessage("ApplyDame", 1);
+            other.gameObject.SendMessage("ApplyDame", DMG);
 
             collider2D.enabled = false;
         }
@@ -42,7 +44,7 @@ public class Bomb_Blue : MonoBehaviour
         {
             if (!other.gameObject.GetComponent<player_HP>().invisible)
             {
-                other.gameObject.SendMessage("ApplyDame", 1);
+                other.gameObject.SendMessage("ApplyDame", DMG);
 
                 collider2D.enabled = false;
 

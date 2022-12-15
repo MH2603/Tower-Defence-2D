@@ -61,7 +61,9 @@ public class pickUP : MonoBehaviour
                 ManagerAsset.SendMessage("SetItemCount", intCoin);
                 seen = true;
             }
-                
+
+            GameManager.instance.Score += (intCoin + 1) * 10; // Save Data
+
             Destroy(gameObject);
         }
     }

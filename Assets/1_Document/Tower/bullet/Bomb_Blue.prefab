@@ -87,6 +87,7 @@ MonoBehaviour:
   spriteCircle: {fileID: 685545241606409121}
   effect: {fileID: 4186287334707270774}
   collider2D: {fileID: 1593473434278123049}
+  DMG: 1.5
   timeDelay: 2
 --- !u!1 &685545241606409123
 GameObject:

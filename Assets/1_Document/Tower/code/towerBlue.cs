@@ -30,7 +30,7 @@ public class towerBlue : MonoBehaviour
 
     void SpawBullet()
     {
-        if (GameManager.instance.enemies.Count > 0 &&   GameManager.instance.isInTurn )
+        if (GameManager.instance.enemies.Count > 0 &&   ManagerSpawn.instance.isTurning )
         {
             Vector2 pos = GameManager.instance.enemies[UnityEngine.Random.Range(0, GameManager.instance.enemies.Count)].transform.position;
 
@@ -38,7 +38,7 @@ public class towerBlue : MonoBehaviour
 
             GameObject newBullet = bulletBlue.Spawn(this.transform.position, Quaternion.identity);
 
-            newBullet.transform.DOJump(pos, 3, 0, 2).OnComplete( () =>
+            newBullet.transform.DOJump(pos, 3, 0, 2).SetEase(Ease.InOutQuad).OnComplete( () =>
             {
                 newBullet.Recycle();
             });

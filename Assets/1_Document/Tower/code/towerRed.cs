@@ -6,7 +6,7 @@ public class towerRed : MonoBehaviour
 {
 
     public GameObject bullet;
-    protected ManagerSpaw managerSpaw;
+    protected ManagerSpawn managerSpaw;
 
     public float timeShot = 2;
     public float speedBullet = 1;
@@ -16,7 +16,7 @@ public class towerRed : MonoBehaviour
     {
         Invoke("SpawBullet", timeShot); 
         
-        managerSpaw = GameObject.Find("ManagerSpaw").GetComponent<ManagerSpaw>();
+        managerSpaw = GameObject.Find("ManagerSpaw").GetComponent<ManagerSpawn>();
     }
 
 

@@ -92,6 +92,8 @@ public class BaseEnemy : MonoBehaviour
 
         GameManager.instance.enemies.Remove(this.gameObject);
 
+        ManagerSpawn.instance.CheckTurn();
+
         Destroy(gameObject, 0.41666666f);
     }
 }

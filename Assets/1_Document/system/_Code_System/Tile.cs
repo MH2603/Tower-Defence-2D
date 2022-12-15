@@ -74,6 +74,8 @@ public class Tile : MonoBehaviour
             managerItem.WhatIsBuilding = -1;
             managerItem.OnGrid(false);
 
+            GameManager.instance.GUI.ShowTowerBuilding(managerItem.WhatIsBuilding);
+
         }
 
 
@@ -94,6 +96,8 @@ public class Tile : MonoBehaviour
             managerItem.SetMouse(0);
             managerItem.WhatIsBuilding = -1;
             managerItem.OnGrid(false);
+
+            GameManager.instance.GUI.ShowTowerBuilding(managerItem.WhatIsBuilding);
         }
     }
 

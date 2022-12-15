@@ -11,9 +11,9 @@ public class CallEnemy : MonoBehaviour
     bool first = true;
 
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        first = true;
     }
 
     // Update is called once per frame

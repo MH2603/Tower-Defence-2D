@@ -6,8 +6,6 @@ using UnityEngine;
 public class ManagerItem : MonoBehaviour
 {
 
-
-
     public GameObject[] Tower;
     public Texture2D[] cursors;
 
@@ -56,6 +54,9 @@ public class ManagerItem : MonoBehaviour
         SetMouse(0);
         WhatIsBuilding = -1;
         OnGrid(false);
+
+        GameManager.instance.GUI.ShowTowerBuilding(WhatIsBuilding);
+
     }
 
 
@@ -64,6 +65,8 @@ public class ManagerItem : MonoBehaviour
         SetMouse(3);
         WhatIsBuilding = -2;
         OnGrid(true);
+
+        GameManager.instance.GUI.ShowTowerBuilding(4);
     } 
 
     //public void OnBuildingRed() // Button On
@@ -103,6 +106,8 @@ public class ManagerItem : MonoBehaviour
             WhatIsBuilding = IDofTower;
             SetMouse(2);
             OnGrid(true);
+
+            GameManager.instance.GUI.ShowTowerBuilding(WhatIsBuilding);
         }
     }
 }

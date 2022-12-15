@@ -166,3 +166,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8193622228508463193}
   anima: {fileID: 100713947910258384}
+  DMG: 1

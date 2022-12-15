@@ -101,7 +101,7 @@ MonoBehaviour:
     type: 3}
   bombBlue: {fileID: 2987692058855471000, guid: fe512ddafd35647418c06d381def0b85,
     type: 3}
-  timeAttack: 4
+  timeAttack: 5
   timeDelay: 2
 --- !u!114 &4837069169676382933
 MonoBehaviour:

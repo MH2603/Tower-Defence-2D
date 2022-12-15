@@ -7,18 +7,15 @@ public class bullet : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator anima;
-    // Start is called before the first frame update
+
+
+    public float DMG = 1;
+
+
     private void OnEnable()
     {
         this.gameObject.GetComponent<Collider2D>().enabled = true;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     IEnumerator Set(bool i)
     {
@@ -44,7 +41,7 @@ public class bullet : MonoBehaviour
 
         if (other.gameObject.tag == "enemy")
         {
-            other.gameObject.SendMessage("ApplyDame", 1);
+            other.gameObject.SendMessage("ApplyDame", DMG);
             DesTroy();
         }
 
@@ -53,7 +50,7 @@ public class bullet : MonoBehaviour
         {
             if ( !other.gameObject.GetComponent<player_HP>().invisible)
             {
-                other.gameObject.SendMessage("ApplyDame", 1);
+                other.gameObject.SendMessage("ApplyDame", DMG);
                 DesTroy();
             }
 

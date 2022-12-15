@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class player_HP : MonoBehaviour
 {
-
     public Animator anima;
 
     public Text text_HP;
@@ -14,27 +14,35 @@ public class player_HP : MonoBehaviour
 
     public bool invisible;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        
+        UpdateHpUI();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ApplyDame(int value) // Get send messenger from bullet
     {
-        UpDateUI();
-    }
 
+        if (HP <= 0) return; 
 
-    void ApplyDame(int value) // Get send messenger from bullet
-    {   
         HP -= value;
-        anima.SetBool("hit", true);
 
-        invisible = true;
-        Invoke("SetInvisible", 0.6f);
-       
+        if( value > 0)
+        {
+            anima.SetBool("hit", true);
+
+            invisible = true;
+            Invoke("SetInvisible", 0.6f);
+
+            CameraAction.instance.ShakeCam();
+        }
+        
+        UpdateHpUI();
+
+        if( HP <= 0)
+        {
+            GameManager.instance.EndGame(); 
+        }
     }
 
     void SetInvisible()
@@ -43,7 +51,7 @@ public class player_HP : MonoBehaviour
     }
 
 
-    void UpDateUI()
+    void UpdateHpUI()
     {
         text_HP.text = "X " + HP.ToString();
     }

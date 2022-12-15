@@ -11,6 +11,8 @@ public class Enemy_AI : MonoBehaviour
     [SerializeField]
     public int pos;
 
+    public Vector2 distanceNextPoss = new Vector2( 0.05f , 0.3f);
+
     [HideInInspector]
     public bool Stop = false;
 
@@ -40,13 +42,18 @@ public class Enemy_AI : MonoBehaviour
         dir.Normalize();
         rb.velocity = dir * speed;  
 
-        if (Vector2.Distance(this.transform.position, points[pos].position) < 0.2f)
+        if (Vector2.Distance(this.transform.position, points[pos].position) < Random.Range(distanceNextPoss.x, distanceNextPoss.y) )
         {
             if (pos == 6)
             {
                 GameManager.instance.enemies.Remove(this.gameObject);
-
                 Destroy(this.gameObject);
+
+                ManagerSpawn.instance.CheckTurn();  
+
+                player_HP player = GameObject.FindObjectOfType<player_HP>();
+                player.ApplyDame(1);
+
 
             }
 
