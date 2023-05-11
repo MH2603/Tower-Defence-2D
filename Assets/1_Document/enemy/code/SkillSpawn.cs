@@ -63,7 +63,7 @@ public class SkillSpawn : BaseSkill
         seed.Recycle();
 
         GameObject F1 = EnemyF1.Spawn(pos, Quaternion.identity);
-        F1.GetComponent<Enemy_AI>().pos = AI.pos;
+        F1.GetComponent<Enemy_AI>().idPos = AI.idPos;
 
     }
 

@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbef8013f3d77f14bbb5ce30d88e832f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intCoin: 3
+  idCoin: 0
   speed: 3
   pickUpDistance: 1
   destroyTime: 7

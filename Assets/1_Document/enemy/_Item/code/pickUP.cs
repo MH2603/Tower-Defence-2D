@@ -6,39 +6,47 @@ public class pickUP : MonoBehaviour
 {
 
     Transform player;
-    GameObject ManagerAsset;
 
-    public int intCoin;
+    public int idCoin;
 
     public float speed = 4;
     public float pickUpDistance = 2.5f;
     public float destroyTime = 5f;
-
-
+    float curretDestroyTime;
+    
     SpriteRenderer image;
 
     bool seen,WillDestroy;
-    void Awake()
-    {
-        player = GameObject.Find("player").GetComponent<Transform>();
-        ManagerAsset = GameObject.Find("ManagerAsset");
 
-        image = this.gameObject.GetComponent<SpriteRenderer>();
+    private void OnEnable()
+    {
+        curretDestroyTime = destroyTime;
+        seen = false;
+        CancelInvoke("OffImage");
+        CancelInvoke("OnImage");
+   
+    }
+
+    private void OnDisable()
+    {
+        image.enabled = true;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameManager.instance.playerOb.transform;
+
+        image = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        destroyTime -= Time.deltaTime;
 
-        if(destroyTime < 0) Destroy(gameObject);
+        curretDestroyTime -= Time.deltaTime;
+
+        if(curretDestroyTime < 0) this.gameObject.Recycle();
      
         if(destroyTime < 1.5f && !WillDestroy )
         {
@@ -58,13 +66,14 @@ public class pickUP : MonoBehaviour
         {
             if (!seen) 
             {
-                ManagerAsset.SendMessage("SetItemCount", intCoin);
+                GameManager.instance.managerAsset.SetItemCount(idCoin);
+
                 seen = true;
             }
 
-            GameManager.instance.Score += (intCoin + 1) * 10; // Save Data
+            GameManager.instance.Score += (idCoin + 1) * 5; // Save Data
 
-            Destroy(gameObject);
+            this.gameObject.Recycle();
         }
     }
 

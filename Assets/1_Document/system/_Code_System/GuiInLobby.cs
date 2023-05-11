@@ -10,8 +10,8 @@ public class GuiInLobby : MonoBehaviour
 
     public void ShowHighScore()
     {
-        highScore.text = PlayerPrefs.GetFloat("HighScore").ToString();
-        highLevel.text = PlayerPrefs.GetFloat("HighLevel").ToString();
+        highScore.text = PLayerPrefManager.HighScore.ToString();
+        highLevel.text = PLayerPrefManager.HighLevel.ToString();
 
         MenuHighScore.SetActive(true);
     }

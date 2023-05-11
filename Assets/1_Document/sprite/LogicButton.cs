@@ -23,6 +23,9 @@ public class LogicButton : MonoBehaviour
 
     public void LoadScene(string nameScene)
     {
+        Time.timeScale = 1f;
+        isPause = false;
+
         StartCoroutine(GoToScene(false));
 
         StartCoroutine(LoadScene_1(nameScene));
@@ -30,7 +33,7 @@ public class LogicButton : MonoBehaviour
     }
     IEnumerator LoadScene_1(string nameScene)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSecondsRealtime(1f);
         SceneManager.LoadScene(nameScene);
     
     }

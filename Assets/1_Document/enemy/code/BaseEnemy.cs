@@ -17,29 +17,15 @@ public class BaseEnemy : MonoBehaviour
     public float HP = 1;
 
     public bool isDeathing;
-    // Start is called before the first frame update
-
-
-    private void Awake()
-    {
-        
-    }
 
     void  Start()
     {
         GameManager.instance.enemies.Add(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     void DropItem(int i)
     {
-        
 
         for( int j = 0; j < dropCount[i]; j++)
         {
@@ -89,8 +75,7 @@ public class BaseEnemy : MonoBehaviour
 
         isDeathing = true;
 
-
-        GameManager.instance.enemies.Remove(this.gameObject);
+        GameManager.instance.RemoveEnemy(gameObject);
 
         ManagerSpawn.instance.CheckTurn();
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Enemy_AI : MonoBehaviour
@@ -9,9 +10,9 @@ public class Enemy_AI : MonoBehaviour
     public float speed;
 
     [SerializeField]
-    public int pos;
+    public int idPos;
 
-    public Vector2 distanceNextPoss = new Vector2( 0.05f , 0.3f);
+    public Vector2 distanceRdTarget = new Vector2( 0.05f , 0.3f);
 
     [HideInInspector]
     public bool Stop = false;
@@ -19,6 +20,7 @@ public class Enemy_AI : MonoBehaviour
     Transform[] points;
 
     Rigidbody2D rb;
+    [SerializeField] Vector3 posRd;
 
 
 
@@ -27,6 +29,8 @@ public class Enemy_AI : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         points = ManagerPoints.instance.points;
+
+        RdPosTarget();
     }
 
     // Update is called once per frame
@@ -36,15 +40,23 @@ public class Enemy_AI : MonoBehaviour
         else rb.velocity = Vector2.zero;
     }
 
+    void RdPosTarget()
+    {
+        posRd.x = points[idPos].position.x + Random.Range(distanceRdTarget.x, distanceRdTarget.y);
+        posRd.y = points[idPos].position.y + Random.Range(distanceRdTarget.x, distanceRdTarget.y);
+    }
+
     void Move()
     {
-        Vector2 dir = points[pos].position - transform.position;
+        
+
+        Vector2 dir = posRd - transform.position;
         dir.Normalize();
         rb.velocity = dir * speed;  
 
-        if (Vector2.Distance(this.transform.position, points[pos].position) < Random.Range(distanceNextPoss.x, distanceNextPoss.y) )
+        if (Vector2.Distance(this.transform.position, posRd) <= 0.1f )
         {
-            if (pos == 6)
+            if (idPos == points.Length)
             {
                 GameManager.instance.enemies.Remove(this.gameObject);
                 Destroy(this.gameObject);
@@ -54,10 +66,11 @@ public class Enemy_AI : MonoBehaviour
                 player_HP player = GameObject.FindObjectOfType<player_HP>();
                 player.ApplyDame(1);
 
-
+                return;
             }
 
-            pos++;
+            RdPosTarget();
+            idPos++;
         }
     }
 }

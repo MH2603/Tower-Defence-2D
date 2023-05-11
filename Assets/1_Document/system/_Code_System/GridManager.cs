@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,9 +12,24 @@ public class GridManager : MonoBehaviour
 
     public Transform cam;
 
+    [SerializeField] List<GameObject> listChild;
+
+    [Header("Mode")]
+    public modeInit mode;
+    public enum modeInit { None,  createTile, switchTile }
+
     void Start()
     {
-        GenerateGrid();
+        switch (mode)
+        {
+            case modeInit.createTile:
+                GenerateGrid();
+                break;
+            case modeInit.switchTile:
+                SwitchGrid();
+                break;
+            
+        }
     }
 
     void GenerateGrid()
@@ -35,6 +50,31 @@ public class GridManager : MonoBehaviour
 
         //cam.position = new Vector3((float)width/2 - 1,(float)height/2 - 1, -10);
     }
+
+    void SwitchGrid()
+    {
+        //for( int i=0; i < transform.childCount; i++)
+        //{
+        //    listChild.Add(transform.GetChild(i).gameObject);
+        //}
+
+
+        for(int i=0; i < listChild.Count; i++)
+        {
+            GameObject tile = Instantiate(tilePrefab);
+
+            tile.transform.SetParent(this.transform);
+            tile.name = listChild[i].name;
+            tile.GetComponent<Tile>().layer = listChild[i].GetComponent<Tile>().layer;
+
+            tile.transform.position = listChild[i].transform.position;
+
+            Destroy(listChild[i].gameObject);
+        }
+
+        this.gameObject.SetActive(false);
+    }
+
 
 
 

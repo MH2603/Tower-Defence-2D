@@ -40,10 +40,10 @@ public class player_move : MonoBehaviour
 
     void Flip()
     {
-        Vector3 tg = transform.localScale;
-        if (movement.x > 0) tg.x = 1;
-        else if(movement.x < 0) tg.x = -1;
+        Vector3 tg = transform.GetChild(0).localScale;
+        if (movement.x > 0) tg.x = 2;
+        else if(movement.x < 0) tg.x = -2;
 
-        transform.localScale = tg;
+        transform.GetChild(0).localScale = tg;
     }
 }

@@ -1,41 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class gui : MonoBehaviour
+public class Gui : MonoBehaviour
 {
-    [Header("GamePlay")]
-    public Text prepareLevel;
+    
 
+    [Header("GamePlay")]
+    public TextMeshProUGUI prepareLevel;
+    public EnergyUI energyUi; 
 
     [Header("Tower")]
     public Sprite[] AssetImageTower;
+    public MouseUI mouseUI;
     public GameObject UiTowerBuilding;
     public Image ImageTowerBuilding;
     float saveY;
 
 
     [Header("EndGame")]
-    public GameObject EndGame;
-    public Text hightScore, score, LevelFinish;
+    public EndGamePopup endGamePopup;
+    
 
-
-    private void Start()
+  
+    public void Init(int maxEnergy = 0)
     {
+        energyUi.Init(maxEnergy);
         saveY = UiTowerBuilding.transform.position.y;
     }
 
     public void ShowEndGame()
     {
-        hightScore.text = PlayerPrefs.GetFloat("HighScore").ToString();
-        score.text = GameManager.instance.Score.ToString();
-        LevelFinish.text = GameManager.instance.LevelFinish.ToString();
-
-
-        EndGame.SetActive(true);
-     
+        endGamePopup.gameObject.SetActive(true);
+        endGamePopup.Init(GameManager.instance.Score);
     }
 
 
@@ -44,7 +42,7 @@ public class gui : MonoBehaviour
         if( WhatIsBuild >= 0)
         {
             ImageTowerBuilding.sprite = AssetImageTower[WhatIsBuild];
-
+            mouseUI.SetImage(AssetImageTower[WhatIsBuild]);
             UiTowerBuilding.transform.DOMoveY( saveY + 3, 1f);
         }
         else
@@ -52,6 +50,7 @@ public class gui : MonoBehaviour
             Vector3 pos =  UiTowerBuilding.transform.position;
             pos.y = -210;
             UiTowerBuilding.transform.DOMoveY( saveY, 1f);
+            mouseUI.OnOff(false);
         }
 
        

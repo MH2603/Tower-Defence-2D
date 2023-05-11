@@ -1,25 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class buttonTower : MonoBehaviour
+public class ButtonTower : MonoBehaviour
 {
     
-
-    public Text CountText;
-    public Text MaxText;
-
+    public TextMeshProUGUI textCount;
+    public TextMeshProUGUI textEnergy;
+    public GameObject fxBg;
     public GameObject tutorial;
+    public Image imageBg;
+    public Image iconItem;
+    public Image iconTower;
+    [Header("* Color text")]
+    public Color colorEnough;
+    public Color colorNotEnough;
 
-    public ManagerItem managerItem;
+    ManagerAsset managerAsset;
+    Button myBtn;
 
     public int WhatIsButton = 0;
 
-    // Start is called before the first frame update
-    void Start()
+
+    public void Init()
     {
-        
+        managerAsset = GameManager.instance.managerAsset;
+        myBtn = GetComponent<Button>();
+
+        myBtn.onClick.AddListener(() => managerAsset.OnBuildingTower(WhatIsButton));
+
+        textEnergy.text = managerAsset.countEnergy[WhatIsButton].ToString();
     }
 
     // Update is called once per frame
@@ -28,30 +38,38 @@ public class buttonTower : MonoBehaviour
         UpdateItemCount();
     }
 
-    
-
-
-
     void OnMouseEnter()
     {
-        if (managerItem.WhatIsBuilding == -1) managerItem.SetMouse(1);
+        if (managerAsset.WhatIsBuilding == -1) managerAsset.SetMouse(1);
         tutorial.SetActive(true);
     }
 
     void OnMouseExit()
     {
-        if (managerItem.WhatIsBuilding == -1) managerItem.SetMouse(0);
+        if (managerAsset.WhatIsBuilding == -1) managerAsset.SetMouse(0);
         tutorial.SetActive(false);
     }
 
 
     void UpdateItemCount()
     {
-        CountText.text = managerItem.Items[WhatIsButton].x.ToString();
-        MaxText.text = "/ " + managerItem.Items[WhatIsButton].y.ToString();
-    }
-   
+        textCount.text = managerAsset.Items[WhatIsButton].x + "/" + managerAsset.Items[WhatIsButton].y;
+        if(managerAsset.Items[WhatIsButton].x < managerAsset.Items[WhatIsButton].y) textCount.color = colorNotEnough;
+        else textCount.color = colorEnough;
 
-  
-    
+        int energy = -GameManager.instance.currentEnergy + GameManager.instance.maxEnergy;
+        if( int.Parse(textEnergy.text) <=  energy ) textEnergy.color = colorEnough;
+        else textEnergy.color = colorNotEnough;
+
+        if(managerAsset.Items[WhatIsButton].x >= managerAsset.Items[WhatIsButton].y)
+        {
+            fxBg.SetActive(true);   
+        }else fxBg.SetActive(false);
+    }
+
+
+
+
 }
+
+

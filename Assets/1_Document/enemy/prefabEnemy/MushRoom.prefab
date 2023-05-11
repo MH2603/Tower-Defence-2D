@@ -140,9 +140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.8
-  pos: 0
-  distanceNextPoss: {x: 0.05, y: 0.3}
+  idPos: 0
+  distanceRdTarget: {x: 0.05, y: 0.3}
   Stop: 0
+  posRd: {x: 0, y: 0, z: 0}
 --- !u!50 &8905130128364006743
 Rigidbody2D:
   serializedVersion: 4
